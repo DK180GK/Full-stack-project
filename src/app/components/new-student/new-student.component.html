@@ -1,0 +1,10 @@
+<div class="new-student-form-wrapper">
+<form class="new-student-form">
+    <h3>Add New Student</h3>
+    <input type="number" placeholder='studentId'[(ngModel)]="student.studentId" [ngModelOptions]="{standalone: true}" required/>
+    <input type="text" placeholder='firstName' [(ngModel)]="student.firstName" [ngModelOptions]="{standalone: true}" required/>
+    <input type="text" placeholder='lastName'[(ngModel)]="student.lastName" [ngModelOptions]="{standalone: true}" required/>
+    <input type="text" placeholder='amountPaid'[(ngModel)]="student.amountPaid" [ngModelOptions]="{standalone: true}" required/>
+    <button type="submit" (click)="addStudent()">Submit</button>
+</form>
+</div>

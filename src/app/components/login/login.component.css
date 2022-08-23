@@ -1,0 +1,51 @@
+.login-wrapper{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+    max-width: 1000px;
+    margin:0 auto;
+    
+}
+.login-left{
+flex-basis:50%;
+height:100%;
+}
+.login-left >img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.login-right{
+    flex-basis:50%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.login-right >input, .login-right >button, .login-right >.login-title,.login-message{
+    width:60%;
+    margin:0 auto;
+    padding:10px;
+}
+.submit-button{
+    background-color:rgb(59, 186, 59);
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+.login-message{
+    /*display:none;*/
+    padding:20px;
+    background-color: red;
+    color:white;
+}
+.login-message-display-none{
+    display:none;
+}
