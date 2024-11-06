@@ -16,7 +16,7 @@ isLoggedIn=this.loginService.isLoggedIn
   ngOnInit(): void {
   }
   userLogin(){
-    if(this.email!=='mainaann367@gmail.com' || this.password!=='123456789'){
+    if(this.email!=='admin' || this.password!=='amrita'){
       this.loginErrorMessage='Please use the correct email and password';
       this.loginService.logout()}
       

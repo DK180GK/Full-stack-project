@@ -14,27 +14,26 @@
     
 }
 .login-left{
-flex-basis:50%;
+flex-basis:90%;
 height:100%;
 }
 .login-left >img{
-    height:100%;
-    width:100%;
-    object-fit: cover;
+    height: 70%;
+    width: 100%;
 }
 .login-right{
-    flex-basis:50%;
+    flex-basis:90%;
     display:flex;
     flex-direction:column;
     gap:10px;
 }
 .login-right >input, .login-right >button, .login-right >.login-title,.login-message{
-    width:60%;
+    width:90%;
     margin:0 auto;
     padding:10px;
 }
 .submit-button{
-    background-color:rgb(59, 186, 59);
+    background-color:rgb(0,41,91);
     color:white;
     border:none;
     border-radius:10px;
