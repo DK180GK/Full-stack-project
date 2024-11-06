@@ -14,7 +14,7 @@ export class NewStudentComponent implements OnInit {
     firstName:'',
     lastName:'',
     amountPaid:'',
-    
+    //balance:''
   }
 
   
@@ -24,6 +24,10 @@ export class NewStudentComponent implements OnInit {
   //balance:number=this.studentServive.feeAmount-Number(this.student.amountPaid);
 addStudent(){
   console.log(this.student)
+  //this.student.balance=this.studentService.getBalance(this.student.amountPaid)
   this.studentService.addNewStudent(this.student)
+}
+getBalance(){
+  this.studentService.getBalance(this.student.amountPaid)
 }
 }

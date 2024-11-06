@@ -8,10 +8,16 @@ import { StudentsService } from 'src/app/services/students.service';
 })
 export class AllStudentsComponent implements OnInit {
 allStudentsArray!:StudentInterface[];
+balance: number=0;
+y:string=''
   constructor(private studentsService: StudentsService) { }
 
   ngOnInit(): void {
-this.allStudentsArray=this.studentsService.getAllStudents()
+this.allStudentsArray=this.studentsService.getAllStudents();
+//this.balance=this.studentsService.getBalance();
+  }
+  getBalance(y:string){
+    return this.studentsService.getBalance(y)
   }
   fee:number=this.studentsService.feeAmount
 }

@@ -16,6 +16,8 @@ import { LoginService } from './services/login.service';
 import { AuthGuard } from './guards/auth.guard';
 
 import { StudentsService } from './services/students.service';
+import { WithBalanceFilterPipe } from './pipes/with-balance-filter.pipe';
+import { WithoutBalanceFilterPipe } from './pipes/without-balance-filter.pipe';
 const appRoutes: Routes=[
   { path: '', redirectTo: 'HomepageComponent',pathMatch:'full' },
   {path:'',component: HomepageComponent},
@@ -42,7 +44,9 @@ const appRoutes: Routes=[
     StudentsWithoutBalanceComponent,
     HomepageComponent,
     DashboardComponent,
-    NewStudentComponent
+    NewStudentComponent,
+    WithBalanceFilterPipe,
+    WithoutBalanceFilterPipe
   ],
   imports: [
     BrowserModule,

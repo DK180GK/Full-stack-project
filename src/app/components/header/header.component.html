@@ -7,9 +7,14 @@
    
     <ul [ngStyle]="{'display':'flex','list-style':'none','gap':'30px'}">
         <li><a routerLink="">Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
+        <li><a>Dashboard</a></li>
+        
         
     </ul>
+    <div *ngIf="!isLoggedIn ; else isNotLoggedIn">
     <button [ngStyle]="{'width':'120px','padding':'10px','background-color':'rgb(59, 186, 59)','color':'white','border':'none','border-radius':'10px','margin-right':'10px','cursor':'pointer'}" (click)="login()">Login</button>
     </div>
+    <ng-template #isNotLoggedIn>
+        <button [ngStyle]="{'width':'120px','padding':'10px','background-color':'rgb(59, 186, 59)','color':'white','border':'none','border-radius':'10px','margin-right':'10px','cursor':'pointer'}" (click)="logout()">Logout</button>
+      </ng-template>
+</div>

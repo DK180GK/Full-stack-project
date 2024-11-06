@@ -15,7 +15,7 @@
         <td>{{student.firstName}}</td>
         <td>{{student.lastName}}</td>
         <td>{{student.amountPaid}}</td>
-        <td>{{fee}}-{{student.amountPaid}}</td>
+        <td>{{getBalance(student.amountPaid)}}</td>
         <td>{{fee}}</td>
       </tr>
       
@@ -24,6 +24,6 @@
 
 </div>
 <ng-template #noStudent>
-  <p><i>There are no students to display!!</i></p>
+  <p>There are no students to display!!</p>
 </ng-template>
 </div>

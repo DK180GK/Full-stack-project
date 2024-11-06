@@ -17,5 +17,7 @@ export class StudentsService {
   getAllStudents(){
     return this.studentsArray
   }
-  
+  getBalance(feesPaid:string){
+ return this.feeAmount-Number(feesPaid)
+  }
 }

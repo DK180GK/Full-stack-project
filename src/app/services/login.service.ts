@@ -8,10 +8,11 @@ export class LoginService{
           this.isLoggedIn=true
         }
         logout(){
+          console.log('logged out')
           this.isLoggedIn=false
         }
         isAuthenticated(){
-            console.log(this.isLoggedIn)
+            console.log(this.isLoggedIn,'yooo')
           return this.isLoggedIn
         }
 }
