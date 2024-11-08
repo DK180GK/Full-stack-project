@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,7 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router,private loginService: LoginService) { }
+  constructor(private router: Router,private loginService: LoginService, private location: Location) { }
 
   ngOnInit(): void {
   }
@@ -19,4 +20,8 @@ export class HeaderComponent implements OnInit {
    logout(){
     this.loginService.logout();
    }
+   goBack() {
+    this.location.back();
+  }
+
 }
