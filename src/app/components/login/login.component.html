@@ -22,6 +22,7 @@
         <h1 class="login-title">Login</h1>
         <input type="email" placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{ standalone: true }" required class="login-input" />
         <input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }" required class="login-input" />
+        <a href="#" (click)="forgotPassword()">Forgot password</a>
         <button type="submit" class="submit-button" (click)="userLogin()">Login</button>
       </form>
     </div>

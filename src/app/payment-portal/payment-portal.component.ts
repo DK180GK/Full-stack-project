@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {Location} from '@angular/common';
+import { AuthService } from '../../../src/app/auth.service';
 
 @Component({
   selector: 'app-payment-portal',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 export class PaymentPortalComponent {
   selectedPaymentMethod: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,private _location: Location,private authService: AuthService) {}
 
   onPaymentMethodChange(method: string) {
     this.selectedPaymentMethod = method;
@@ -18,14 +20,14 @@ export class PaymentPortalComponent {
   proceedWithPayment() {
     if (this.selectedPaymentMethod) {
       alert(`Proceeding with ${this.selectedPaymentMethod} payment.`);
+      this.authService.updatePaymentStatus('Completed');
+
     } else {
       alert('Please select a payment method.');
     }
   }
 
-  logout() {
-    // Add logout logic here, e.g., clear tokens or user data
-    alert("Logging out...");
-    this.router.navigate(['/']); // Redirect to login or homepage
+  backClicked() {
+    this._location.back();
   }
 }

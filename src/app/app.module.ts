@@ -19,6 +19,9 @@ import { StudentsService } from './services/students.service';
 import { WithBalanceFilterPipe } from './pipes/with-balance-filter.pipe';
 import { WithoutBalanceFilterPipe } from './pipes/without-balance-filter.pipe';
 import { PaymentPortalComponent } from './payment-portal/payment-portal.component';
+import { FeeManagementComponent } from './fee-payment-portal/fee-payment-portal.component';
+import { PrintPageComponent } from './components/print-fee/print-fee.component';
+
 const appRoutes: Routes=[
   { path: '', redirectTo: 'HomepageComponent',pathMatch:'full' },
   {path:'',component: HomepageComponent},
@@ -48,7 +51,9 @@ const appRoutes: Routes=[
     NewStudentComponent,
     WithBalanceFilterPipe,
     WithoutBalanceFilterPipe,
-    PaymentPortalComponent
+    PaymentPortalComponent,
+    FeeManagementComponent,
+    PrintPageComponent
   ],
   imports: [
     BrowserModule,
